@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VFX Global | Form Filling</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="supabase-client.js"></script><script src="step.js" defer></script>
+</head>
+<body>
+  <div class="page-shell portal-shell">
+    <header class="site-header">
+      <div class="brand-wrap"><div class="brand-logo"><span>VFX</span></div><div class="brand-text"><strong>VFX</strong><span>GLOBAL</span></div></div>
+      <a class="mini-link" href="tracking-id.html">Track application</a>
+    </header>
+    <main class="step-main">
+      <div class="step-heading"><span class="number">01</span><div><p class="eyebrow">Fee - $20 (INR 1,700)</p><h1>Form Filling</h1><p>Complete your personal and visa information before submitting the $20 fee.</p></div></div>
+      <form id="step1-form" class="step-form" data-stage="0" novalidate>
+        <div class="form-grid">
+          <div class="field field-full"><label for="full-name">Full Name <span>*</span></label><input id="full-name" required placeholder="Full name"></div>
+          <div class="field"><label for="email">Email <span>*</span></label><input id="email" type="email" required placeholder="your@email.com"></div>
+          <div class="field"><label for="phone">Phone <span>*</span></label><input id="phone" required placeholder="Phone number"></div>
+          <div class="field"><label for="passport">Passport Number <span>*</span></label><input id="passport" required placeholder="Passport number"></div>
+          <div class="field"><label for="identity">Aadhaar / PAN <span>*</span></label><input id="identity" required placeholder="Identity number"></div>
+          <div class="field"><label for="visa-type">Visa Type <span>*</span></label><select id="visa-type" required><option value="">Select visa type</option><option>Tourist Visa</option><option>Business Visa</option><option>Student Visa</option><option>Family Visa</option><option>Work Visa</option></select></div>
+          <div class="field field-full"><label for="purpose">Travel Purpose <span>*</span></label><textarea id="purpose" required placeholder="Tell us the reason for travel"></textarea></div>
+          <div class="field field-full"><label for="address">Address <span>*</span></label><textarea id="address" required placeholder="Residential address"></textarea></div>
+          <div class="field field-full payment-field"><label>Payment Method <span>*</span></label><div id="payment-method-options" class="payment-options" role="radiogroup"></div><p id="payment-method-message" class="payment-message">Choose a payment method to see the agent's details.</p></div>
+          <div class="field field-full"><label for="payment-screenshot">Payment Screenshot</label><div class="upload-wrap"><input id="payment-screenshot" type="file" accept=".jpg,.jpeg,.png,.pdf"><label class="upload-button" for="payment-screenshot">Choose Screenshot</label><span id="payment-screenshot-name">No file selected</span></div></div>
+        </div>
+        <button class="submit-btn" type="submit">Submit Form</button>
+        <p id="step-message" class="login-message" role="status"></p>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
